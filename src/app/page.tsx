@@ -35,12 +35,12 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
-        <h1 className="text-4xl font-bold text-center text-gray-900 mb-12">Quota Perfect</h1>
+    <div className="min-h-screen bg-[#1a1d21] py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto bg-[#2c2d30] rounded-xl shadow-xl p-8">
+        <h1 className="text-4xl font-bold text-center text-white mb-12">Quota Perfect</h1>
         <form onSubmit={handleSubmit} className="space-y-8">
           <div className="space-y-4">
-            <label htmlFor="accountList" className="block text-lg font-medium text-gray-700">
+            <label htmlFor="accountList" className="block text-lg font-medium text-white">
               Account List
             </label>
             <div className="flex items-center space-x-4">
@@ -49,22 +49,22 @@ export default function Home() {
                 id="accountList"
                 accept=".csv"
                 onChange={handleFileChange}
-                className="block w-full text-sm text-gray-500
+                className="block w-full text-sm text-gray-300
                   file:mr-4 file:py-2 file:px-4
-                  file:rounded-md file:border-0
+                  file:rounded-lg file:border-0
                   file:text-sm file:font-semibold
-                  file:bg-indigo-50 file:text-indigo-700
-                  hover:file:bg-indigo-100"
+                  file:bg-[#611f69] file:text-white
+                  hover:file:bg-[#4a154b]"
                 required
               />
-              <span className="text-sm text-gray-500">
+              <span className="text-sm text-gray-400">
                 {formData.accountList ? formData.accountList.name : 'No file chosen'}
               </span>
             </div>
           </div>
 
           <div className="space-y-4">
-            <label htmlFor="quotaCarriers" className="block text-lg font-medium text-gray-700">
+            <label htmlFor="quotaCarriers" className="block text-lg font-medium text-white">
               Number of Quota Carriers
             </label>
             <input
@@ -75,14 +75,14 @@ export default function Home() {
               onChange={handleChange}
               min="0"
               max="10000"
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-lg p-3"
+              className="mt-1 block w-full rounded-lg bg-[#1a1d21] border-0 text-white placeholder-gray-400 focus:ring-2 focus:ring-[#611f69] text-lg p-3"
               required
             />
-            <p className="text-sm text-gray-500">Enter a number between 0 and 10,000</p>
+            <p className="text-sm text-gray-400">Enter a number between 0 and 10,000</p>
           </div>
 
           <div className="space-y-4">
-            <label htmlFor="acv" className="block text-lg font-medium text-gray-700">
+            <label htmlFor="acv" className="block text-lg font-medium text-white">
               ACV (Annual Contract Value)
             </label>
             <input
@@ -93,14 +93,14 @@ export default function Home() {
               onChange={handleChange}
               min="0"
               max="100000000"
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-lg p-3"
+              className="mt-1 block w-full rounded-lg bg-[#1a1d21] border-0 text-white placeholder-gray-400 focus:ring-2 focus:ring-[#611f69] text-lg p-3"
               required
             />
-            <p className="text-sm text-gray-500">Enter a number between 0 and 100,000,000</p>
+            <p className="text-sm text-gray-400">Enter a number between 0 and 100,000,000</p>
           </div>
 
           <div className="space-y-4">
-            <label htmlFor="annualRevenueTarget" className="block text-lg font-medium text-gray-700">
+            <label htmlFor="annualRevenueTarget" className="block text-lg font-medium text-white">
               Annual Revenue Target
             </label>
             <input
@@ -111,16 +111,16 @@ export default function Home() {
               onChange={handleChange}
               min="0"
               max="100000000000"
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-lg p-3"
+              className="mt-1 block w-full rounded-lg bg-[#1a1d21] border-0 text-white placeholder-gray-400 focus:ring-2 focus:ring-[#611f69] text-lg p-3"
               required
             />
-            <p className="text-sm text-gray-500">Enter a number between 0 and 100,000,000,000</p>
+            <p className="text-sm text-gray-400">Enter a number between 0 and 100,000,000,000</p>
           </div>
 
           <div className="pt-4">
             <button
               type="submit"
-              className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              className="w-full flex justify-center py-3 px-4 rounded-lg shadow-sm text-lg font-medium text-white bg-[#611f69] hover:bg-[#4a154b] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#611f69] focus:ring-offset-[#2c2d30] transition-colors duration-200"
             >
               Calculate
             </button>
