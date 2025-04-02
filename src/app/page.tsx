@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Logo from '@/components/Logo';
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -47,7 +48,10 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#1a1d21] py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto bg-[#2c2d30] rounded-xl shadow-xl p-8">
-        <h1 className="text-4xl font-bold text-center text-white mb-12">Quota Perfect</h1>
+        <div className="flex flex-col items-center mb-12">
+          <Logo />
+          <h1 className="text-4xl font-bold text-center text-white">Quota Perfect</h1>
+        </div>
         <form onSubmit={handleSubmit} className="space-y-8">
           <div className="space-y-4">
             <label htmlFor="accountList" className="block text-lg font-medium text-white">
